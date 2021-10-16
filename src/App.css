@@ -1,0 +1,32 @@
+.containerApp {
+    width: 100%;
+    height: 100vh;
+
+    padding: 1.5rem;
+
+    
+}
+
+.containerDashboard {
+    width: 100%;
+    height: calc(100% - 7rem);
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+
+    background-color: #252422;
+
+}
+
+.containerMain {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    border-radius: 5px;
+    padding: 2rem;
+
+    overflow-y: auto;
+    
+}

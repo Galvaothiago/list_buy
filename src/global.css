@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f110c;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-y: hidden;
+}
+
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.8%;
+    }
+}
+
+@media(max-width: 760px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button, input {
+    font-family: 'Ubuntu', sans-serif;
+}

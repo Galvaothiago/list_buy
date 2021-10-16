@@ -1,0 +1,77 @@
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+
+    padding-right: 1.5rem;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+
+
+    background:rgba(0, 0, 0, .55);
+
+    .popup-feedback {
+        margin-top: 4rem;
+        max-width: 20rem;
+        width: 100%;
+        min-height: 4rem;
+        height: auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        place-items: center;
+        padding: .35rem;
+
+        background-color: #669bbc;
+        border-radius: 2px;
+
+        position: relative;
+
+        .progressBar {
+            height: 5px;
+            // width: 80%;
+
+            background: blue;
+
+            position: absolute;
+            bottom: 0;
+        }
+        p {
+            display: block;
+            word-wrap: break-word;
+            text-align: center;
+        }
+
+
+
+
+        button {
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: .1rem;
+            right: .35rem;
+
+            background: none;
+            outline: transparent;
+            border: none;
+
+            cursor: pointer;
+
+            span {
+                font-size: 1.25rem;
+                // background: turquoise;
+
+
+                &:hover {
+                    filter: brightness(.2);
+                }
+            
+            }
+        }
+    }
+}
