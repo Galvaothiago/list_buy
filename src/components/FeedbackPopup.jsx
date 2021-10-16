@@ -4,30 +4,24 @@ import { popupContext } from "./context/PopupContext"
 import '../styles/FeedbackPopup.scss'
 
 export function Popup() {
-    const { closePopup, closeAutomaticallyPopup, message } = useContext(popupContext)
+    const { closePopup, message } = useContext(popupContext)
     
-    const timeToClosePopup = 6000
+    const timeToClosePopup = 5000
     const [ time, setTime ] = useState(timeToClosePopup)
     const [ progress, setProgress ] = useState(100)
 
+    const relativeProgressToTime = 100 - ((timeToClosePopup - 1) * 100) / timeToClosePopup
+    
     const stopProgressBar = setInterval(() => {
-        setTime(time - 1)
-
-    }, 1)
-
-    useEffect(() => {
-        const unsubscribe = () => setProgress((time * 100) / timeToClosePopup)
-
-        return unsubscribe()
-    }, [time])
+        setTime(oldTime => oldTime - 1)
+        setProgress(oldProgress => oldProgress - relativeProgressToTime)
+    }, 500)
 
     if(time === 0) {
         clearInterval(stopProgressBar)
         closePopup()
         setTime(timeToClosePopup)
     }
-
-    // closeAutomaticallyPopup(timeToClosePopup)
 
     return (
         <div className="container">
